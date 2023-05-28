@@ -1,0 +1,20 @@
+{
+  "ServiceName": "nodeapp",
+  "SourceConfiguration": {
+    "AuthenticationConfiguration": {
+      "AccessRoleArn": "arn:aws:iam::124340425922:role/service-role/AppRunnerECRAccessRole"
+    },
+    "AutoDeploymentsEnabled": true,
+    "ImageRepository": {
+      "ImageIdentifier": "124340425922.dkr.ecr.us-east-1.amazonaws.com/nodeapp",
+      "ImageConfiguration": {
+        "Port": "3000"
+      },
+      "ImageRepositoryType": "ECR"
+    }
+  },
+  "InstanceConfiguration": {
+    "CPU": "1 vCPU",
+    "Memory": "2 GB"
+  }
+}
