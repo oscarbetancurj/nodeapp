@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeapp
+  labels:
+    name: nodeapp
+spec:
+  containers:
+  - name: nodeapp
+    image: oscarbet5/node-app
+    env:
+    - name: MY_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: mysecret
+          key: MY_SECRET
