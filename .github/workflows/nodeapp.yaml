@@ -24,7 +24,9 @@ jobs:
         run: npm run lint
 
       - name: Prettier
-        run: npm run prettier
+        run: |
+              npm run prettier
+              npm install --save-dev --save-exact prettier
 
       - name: testing
         run: CI=true npm run test
